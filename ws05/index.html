@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop 5 – Responsive Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Internal CSS for WS05 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Task 1: Responsive layout */
+        .responsive-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .column {
+                flex: 100%;
+            }
+        }
+
+        /* Task 2: Responsive image */
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* Task 3: Media query box */
+        .media-query-box {
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .media-query-box {
+                background-color: lightcoral;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .media-query-box {
+                background-color: lightblue;
+            }
+        }
+
+        /* Task 4: Responsive navigation */
+        .responsive-nav {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .responsive-nav .menu-toggle {
+            display: none;
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .responsive-nav .nav-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            gap: 15px;
+        }
+
+        .responsive-nav .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .responsive-nav .nav-list {
+                display: none;
+            }
+
+            .responsive-nav .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Workshop 5 – Responsive Design</h1>
+
+    <!-- Task 1: Responsive layout -->
+    <div class="responsive-container">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+    </div>
+
+    <!-- Task 2: Responsive image -->
+    <img src="../images/crossout.png" alt="Responsive Image" class="responsive-image">
+
+    <!-- Task 3: Media query box -->
+    <div class="media-query-box">
+        Resize the window to see the effect
+    </div>
+
+    <!-- Task 4: Responsive navigation -->
+    <nav class="responsive-nav">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
